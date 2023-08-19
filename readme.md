@@ -9,7 +9,7 @@ Created for specific reason, to deal with html range inputs better and prettier.
 * 🎨 comes with base themes & can accept new themes
 * ⚒️ debug freindly process
 * 🎯 can target all range inputs, or specific one
-* ☕ can be better by a cup of coffe
+* ☕ can be better by a cup of coffee
 
 ## How to use
 ### Basic usage
@@ -68,12 +68,12 @@ rangeJsinit({
 
 ## Config options
 currently RangeJs supports below options.
-| name  |  required |  type  | default |
-|:------|:---------:|:------:|:-------:|
-| `theme` | false     | string | `'default'` |
-| `debug` | false     | boolean|  `false`  |
-| `value` | false     | integer|  `0`  |
-| `cfns` | false     | object|  `null`  |
+| name  |  required |  type  | default | description |
+|:------|:---------:|:------:|:-------:|:------- |
+| `theme` | false     | string | `'default'` | theme name |
+| `debug` | false     | boolean|  `false`  | enables console debugging |
+| `value` | false     | integer|  `0`  | initial vale |
+| `cfns` | false     | object|  `null`  | callback functions |
 
 ## Theming
 you can use core ready themes, or define your own theme.
@@ -111,3 +111,10 @@ In the next versions, it will be easier to make the theme because it is one of o
 
 ## Contribute
 To all those who can use the keyboard, **pull requests are welcomed** 🙏.
+
+## Donate
+for now I prefer pull requests and stars. for the future, i will receive donations 💸.
+
+## License
+
+The RangeJs is open-sourced script licensed under the [MIT license](https://opensource.org/license/mit/).
