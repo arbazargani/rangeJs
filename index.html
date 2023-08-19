@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="range.css">
+    <link rel="stylesheet" href="range_prime.css">
+    <link rel="stylesheet" href="range_sea.css">
+    <title>Pretty Range Selector</title>
+    <style>
+        html {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .wrapper {
+            background: #1c1c28;
+            border-radius: 5px;
+            padding: 15px;
+            width: 500px;
+            height: 300px;
+            margin: 0px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <label style="color: #c4c4c4">Default Theme <input type="range" id="range_default"></label>
+        
+        <label style="color: #c4c4c4">Prime Theme <input type="range" id="range_prime"></label>
+        
+        <label style="color: #c4c4c4">Sea Theme <input type="range" id="range_sea"></label>
+    </div>
+
+    <script src="range.js"></script>
+    <script>
+        rangeJsinit({'theme':'default', 'debug': true}, '#range_default');
+        rangeJsinit({'theme':'prime'}, '#range_prime');
+        rangeJsinit({'theme':'sea'}, '#range_sea');
+    </script>
+</body>
+</html>
