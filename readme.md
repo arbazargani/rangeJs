@@ -1,4 +1,5 @@
 # RangeJS
+![RangeJS](https://github.com/arbazargani/rangeJs/blob/main/images/head.png?raw=true)
 Created for specific reason, to deal with html range inputs better and prettier `:)`
 ## About RangeJS
 * 👌 almost easy to use
@@ -9,18 +10,18 @@ Created for specific reason, to deal with html range inputs better and prettier 
 
 ## How to use
 1. include base css file.
-```
-    // base css file, contains base styles
+```html
+     <!-- base css file, contains base styles -->
     <link rel="stylesheet" href="range.css">
 ```
 2. include base js file before body closing tag
-```
-    // core js file, contains initial script
+```html
+    <!-- core js file, contains initial script -->
     <script src="range.js"></script>
 ```
 3. call init function
-```
-    // calling empty, default theme & default config on all range inputs on page 
+```js
+    // calling empty, default theme & default config on all range inputs on page
     rangeJsinit();
 
     // calling with only config, on all range inputs
@@ -34,16 +35,16 @@ Created for specific reason, to deal with html range inputs better and prettier 
 ## Theming
 you can use core ready themes, or define your own theme.
 1. include theme css file.
-```
-    // base css file, contains base styles
+```html
+    <!-- base css file, contains base styles -->
     <link rel="stylesheet" href="range.css">
-    // theme(s) css file
+    <!-- theme(s) css file -->
     <link rel="stylesheet" href="range_prime.css">
     <link rel="stylesheet" href="range_sea.css">
 ```
 
 2. add theme to config during initialization 
-```
+```js
     rangeJsinit({'theme':'prime'}, '#range_default');
     // or on all of inputs
     rangeJsinit({'theme':'sea'});
