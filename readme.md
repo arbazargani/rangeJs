@@ -1,6 +1,7 @@
 # RangeJS
 ![RangeJS](https://github.com/arbazargani/rangeJs/blob/main/images/head.png?raw=true)
-Created for specific reason, to deal with html range inputs better and prettier `:)`
+
+Created for specific reason, to deal with html range inputs better and prettier :)
 ## About RangeJS
 * 👌 almost easy to use
 * 🎨 comes with base themes & can accept new themes
