@@ -73,9 +73,20 @@
     
     <script src="range.js"></script>
     <script>
-        rangeJsinit({'theme':'default', 'debug': true}, '#range_default');
-        rangeJsinit({'theme':'prime'}, '#range_prime');
-        rangeJsinit({'theme':'sea'}, '#range_sea');
+        function notif(msg) {
+            window.alert(msg);
+        }
+        rangeJsinit({
+            'theme':'default',
+            'debug': false,
+            'value': 2,
+            'cfns': {
+                'input': () => { notif('on input triggered.') },
+                'change': () => { console.log('changed') }
+            }
+        }, '#range_default');
+        rangeJsinit({'theme':'prime', 'value': 40}, '#range_prime');
+        rangeJsinit({'theme':'sea', 'value': 90}, '#range_sea');
     </script>
 </body>
 </html>

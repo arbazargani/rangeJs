@@ -19,11 +19,12 @@ const colorMap = {
 
 function rangeJsElementHandler(config, item) {
     identifier = prefix + seperator + new Date().getTime();
+
     if (item.id == '') {
         item.id = identifier;
     }
 
-    item.value = 0;
+    item.value = (config.hasOwnProperty('value')) ? config.value : 0;
     item.classList.add('range', 'range_js');
     item.dataset.range_id = identifier;
 
@@ -41,6 +42,12 @@ function rangeJsElementHandler(config, item) {
         item.dataset.value = item.value;
         item.title = item.value;
     })
+
+    if (config.hasOwnProperty('cfns')) {
+        for (const [eventName, callbackFn] of Object.entries(config.cfns)) {
+            item.addEventListener(eventName, callbackFn);
+        }
+    }
 }
 
 function rangeJsinit(config = false, selector = false) {

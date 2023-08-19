@@ -12,6 +12,7 @@ Created for specific reason, to deal with html range inputs better and prettier.
 * ☕ can be better by a cup of coffe
 
 ## How to use
+### Basic usage
 1. include base css file.
 ```html
 <!-- base css file, contains base styles -->
@@ -33,6 +34,36 @@ rangeJsinit({'theme':'sea', 'debug': true});
 // init only on specific element
 rangeJsinit({'theme':'prime'}, '#range_prime');
 ```
+### Advanced usage
+you can define your own callback functions to execute after firing events.
+currently you can define your callbacks by `cfns` parameter inside config object.
+
+**Note:** consider to pass the callback as a lambda function to prevent unnecessary function call.
+
+```js
+function notif(msg) {
+    window.alert(msg);
+}
+// range inputs only supports 2 events
+rangeJsinit({
+    'theme':'default',
+    'debug': true,
+    'value': 10,
+    'cfns': {
+        'input': () => { notif('on input triggered.') },
+        'change': () => { console.log('changed') }
+    }
+}, '#range_default');
+```
+
+## Config options
+currently RangeJs supports below options.
+| name  |  required |  type  | default |
+|:------|:---------:|:------:|:-------:|
+| `theme` | false     | string | `'default'` |
+| `debug` | false     | boolean|  `false`  |
+| `value` | false     | integer|  `0`  |
+| `cfns` | false     | object|  `null`  |
 
 ## Theming
 you can use core ready themes, or define your own theme.
@@ -61,8 +92,9 @@ For now, this will be a little hard, you should define ur custom css like `range
 In the next versions, it will be easier to make the theme because it is one of our important goals.
 
 ## Current/Future features list
-* ⬜ callback function handler for events
 * ⬜ add step seprator option
+* ✅ ~~add default value option~~
+* ✅ ~~callback function handler for events~~
 * ✅ ~~debug option~~
 * ✅ ~~handle single or all inputs~~
 
