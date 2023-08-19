@@ -16,12 +16,22 @@ Created for specific reason, to deal with html range inputs better and prettier.
 1. include base css file.
 ```html
 <!-- base css file, contains base styles -->
+
+<!-- load directly -->
 <link rel="stylesheet" href="range.css">
+
+<!-- load via jsDeliver -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arbazargani/rangeJs/range.css">
 ```
 2. include base js file before body closing tag
 ```html
 <!-- core js file, contains initial script -->
+
+<!-- load directly -->
 <script src="range.js"></script>
+
+<!-- load via jsDeliver -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arbazargani/rangeJs/range.js">
 ```
 3. call init function
 ```js
@@ -93,6 +103,7 @@ In the next versions, it will be easier to make the theme because it is one of o
 
 ## Current/Future features list
 * ⬜ add step seprator option
+* ⬜ handle first init selected area forground color.
 * ✅ ~~add default value option~~
 * ✅ ~~callback function handler for events~~
 * ✅ ~~debug option~~
