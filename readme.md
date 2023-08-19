@@ -1,5 +1,7 @@
 # RangeJS
-![RangeJS](https://github.com/arbazargani/rangeJs/blob/main/images/head.png?raw=true)
+<p align="center">
+<img alt="rangeJs" src="https://github.com/arbazargani/rangeJs/blob/main/images/head.png?raw=true" width="auto"></img>
+</p>
 
 Created for specific reason, to deal with html range inputs better and prettier.
 ## About RangeJS
