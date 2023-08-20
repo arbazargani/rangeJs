@@ -59,6 +59,7 @@ rangeJsinit({
     'theme':'default',
     'debug': true,
     'value': 10,
+    'rtl': true,
     'cfns': {
         'input': () => { notif('on input triggered.') },
         'change': () => { console.log('changed') }
@@ -74,6 +75,7 @@ currently RangeJs supports below options.
 | `debug` | false     | boolean|  `false`  | enables console debugging |
 | `value` | false     | integer|  `0`  | initial vale |
 | `cfns` | false     | object|  `null`  | callback functions |
+| `rtl` | false     | boolean|  `false`  | is rtl or not |
 
 ## Theming
 you can use core ready themes, or define your own theme.
@@ -100,6 +102,11 @@ For now, this will be a little hard, you should define ur custom css like `range
 **Note:** Any input automatically takes `theme_{theme-name}` class. i.e for prime theme, 'theme_prime' appends to input tag class list. so your theme css file should use this name format for styling. 
 
 In the next versions, it will be easier to make the theme because it is one of our important goals.
+
+## Direction
+for rtl inputs, set `rtl` to `true` in config object.
+
+**Note:** consider you should set `direction` style for input yourself, this option only handle the background fill direction.
 
 ## Current/Future features list
 * ⬜ add step seprator option

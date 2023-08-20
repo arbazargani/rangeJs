@@ -19,11 +19,9 @@ const colorMap = {
 
 function rangeJsElementHandler(config, item) {
     identifier = prefix + seperator + new Date().getTime();
-
     if (item.id == '') {
         item.id = identifier;
     }
-
     item.value = (config.hasOwnProperty('value')) ? config.value : 0;
     item.classList.add('range', 'range_js');
     item.dataset.range_id = identifier;
@@ -34,11 +32,13 @@ function rangeJsElementHandler(config, item) {
 
     item.addEventListener("input", (event) => {
         let tempSliderValue = item.value;
+        let direction = (config.hasOwnProperty('rtl') && config.rtl === true) ? 'left' : 'right';
         progress = tempSliderValue;
         background = backgroundMap[config.theme];
         forground = colorMap[config.theme];
         (config.debug) && console.log([background, forground]);
-        item.style.background = `linear-gradient(to right, ${forground} ${progress}%, ${background} ${progress}%)`;
+        
+        item.style.background = `linear-gradient(to ${direction}, ${forground} ${progress}%, ${background} ${progress}%)`;
         item.dataset.value = item.value;
         item.title = item.value;
     })
