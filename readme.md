@@ -76,6 +76,7 @@ currently RangeJs supports below options.
 | `value` | false     | integer|  `0`  | initial vale |
 | `cfns` | false     | object|  `null`  | callback functions |
 | `rtl` | false     | boolean|  `false`  | is rtl or not |
+| `rotate` | false     | integer|  `0`  |  rotation degree |
 
 ## Theming
 you can use core ready themes, or define your own theme.

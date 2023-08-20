@@ -30,6 +30,10 @@ function rangeJsElementHandler(config, item) {
         item.classList.add('theme_' + config.theme);
     }
 
+    if (config.hasOwnProperty('rotate') && typeof(config.rotate) == 'number') {
+        item.style.rotate = `${config.rotate}deg`;
+    }
+
     item.addEventListener("input", (event) => {
         let tempSliderValue = item.value;
         let direction = (config.hasOwnProperty('rtl') && config.rtl === true) ? 'left' : 'right';
