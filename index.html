@@ -78,16 +78,16 @@
         rangeJsinit({
             'theme':'default',
             'debug': true,
-            'value': 0,
+            'value': 30,
             'rtl': true,
-            'rotate': 90,
+            // 'rotate': 90,
             'cfns': {
                 'input': () => { notif('on input triggered.') },
                 'change': () => { console.log('changed') }
             }
         }, '#range_default');
-        rangeJsinit({'theme':'prime', 'value': 0}, '#range_prime');
-        rangeJsinit({'theme':'sea', 'value': 0}, '#range_sea');
+        rangeJsinit({'theme':'prime', 'value': 40}, '#range_prime');
+        rangeJsinit({'theme':'sea', 'value': 70}, '#range_sea');
     </script>
 </body>
 </html>

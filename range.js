@@ -2,7 +2,7 @@ const prefix = 'range';
 const seperator = '_';
 const baseConfig = {
     'theme': 'default',
-    'debug': false,
+    'debug': false,        
 };
 
 const backgroundMap = {
@@ -17,11 +17,24 @@ const colorMap = {
     'sea': '#02c38e'
 }
 
+function handleRangeElementStyle(item, config) {
+    let progress = item.value;
+    let direction = (config.hasOwnProperty('rtl') && config.rtl === true) ? 'left' : 'right';
+    let background = backgroundMap[config.theme];
+    let forground = colorMap[config.theme];
+    
+    (config.debug) && console.log([background, forground]);
+    item.style.background = `linear-gradient(to ${direction}, ${forground} ${progress}%, ${background} ${progress}%)`;
+    item.dataset.value = item.value;
+    item.title = item.value;
+}
+
 function rangeJsElementHandler(config, item) {
     identifier = prefix + seperator + new Date().getTime();
     if (item.id == '') {
         item.id = identifier;
     }
+    
     item.value = (config.hasOwnProperty('value')) ? config.value : 0;
     item.classList.add('range', 'range_js');
     item.dataset.range_id = identifier;
@@ -34,17 +47,12 @@ function rangeJsElementHandler(config, item) {
         item.style.rotate = `${config.rotate}deg`;
     }
 
+    // handle styling for first render
+    handleRangeElementStyle(item, config)
+
     item.addEventListener("input", (event) => {
-        let tempSliderValue = item.value;
-        let direction = (config.hasOwnProperty('rtl') && config.rtl === true) ? 'left' : 'right';
-        progress = tempSliderValue;
-        background = backgroundMap[config.theme];
-        forground = colorMap[config.theme];
-        (config.debug) && console.log([background, forground]);
-        
-        item.style.background = `linear-gradient(to ${direction}, ${forground} ${progress}%, ${background} ${progress}%)`;
-        item.dataset.value = item.value;
-        item.title = item.value;
+        // handle styling on changes
+        handleRangeElementStyle(item, config);
     })
 
     if (config.hasOwnProperty('cfns')) {

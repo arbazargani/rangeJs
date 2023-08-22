@@ -111,7 +111,7 @@ for rtl inputs, set `rtl` to `true` in config object.
 
 ## Current/Future features list
 * ⬜ add step seprator option
-* ⬜ handle first init selected area forground color.
+* ✅ ~~handle first init selected area forground color~~
 * ✅ ~~add default value option~~
 * ✅ ~~callback function handler for events~~
 * ✅ ~~debug option~~
