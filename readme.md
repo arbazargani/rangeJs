@@ -31,7 +31,7 @@ Created for specific reason, to deal with html range inputs better and prettier.
 <script src="range.js"></script>
 
 <!-- load via jsDeliver -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arbazargani/rangeJs/range.js">
+<script src="https://cdn.jsdelivr.net/gh/arbazargani/rangeJs/range.js"></scrtip>
 ```
 3. call init function
 ```js
