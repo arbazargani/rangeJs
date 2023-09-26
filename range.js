@@ -26,7 +26,7 @@ function isDocumentRtl() {
 
 function handleRangeElementStyle(item, config) {
     let progress = item.value;
-    let direction = (config.hasOwnProperty('rtl') && config.rtl === true && !isDocumentRtl()) ? 'left' : 'right';
+    let direction = (config.hasOwnProperty('rtl') && config.rtl === true && isDocumentRtl()) ? 'left' : 'right';
     let background = backgroundMap[config.theme];
     let forground = colorMap[config.theme];
     
