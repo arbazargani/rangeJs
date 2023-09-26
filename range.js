@@ -42,7 +42,9 @@ function rangeJsElementHandler(config, item) {
         item.id = identifier;
     }
     
-    item.value = (config.hasOwnProperty('value')) ? config.value : 0;
+    item.value = (config.hasOwnProperty('value')) 
+        ? config.value 
+        : (item.hasAttribute('value')) ? item.value : 0;
     item.classList.add('range', 'range_js');
     item.dataset.range_id = identifier;
 
