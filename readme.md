@@ -69,14 +69,15 @@ rangeJsinit({
 
 ## Config options
 currently RangeJs supports below options.
-| name  |  required |  type  | default | description |
-|:------|:---------:|:------:|:-------:|:------- |
-| `theme` | false     | string | `'default'` | theme name |
-| `debug` | false     | boolean|  `false`  | enables console debugging |
-| `value` | false     | integer|  `0`  | initial vale |
-| `cfns` | false     | object|  `null`  | callback functions |
-| `rtl` | false     | boolean|  `false`  | is rtl or not |
-| `rotate` | false     | integer|  `0`  |  rotation degree |
+| name       |  required |  type  | default | description |
+|:-----------|:---------:|:------:|:-------:|:------- |
+| `theme`    | false     | string | `'default'` | theme name |
+| `debug`    | false     | boolean|  `false`    | enables console debugging |
+| `value`    | false     | integer|  `0`        | initial value |
+| `balancer` | false     | integer|  `0`        | balancer number (positive/negative) to handle styling for values more than 100 |
+| `cfns`     | false     | object |  `null`     | callback functions |
+| `rtl`      | false     | boolean|  `false`    | is rtl or not |
+| `rotate`   | false     | integer|  `0`        |  rotation degree |
 
 ## Theming
 you can use core ready themes, or define your own theme.

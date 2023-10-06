@@ -30,7 +30,9 @@ function handleRangeElementStyle(item, config) {
 
     if (progress > 100 && item.max !== undefined) {
         // minus 2 to handle styling of background fill overflow.
-        progress = Math.floor((progress * 100) / item.max) - 2;
+        progress = Math.floor((progress * 100) / item.max);
+
+        progress += (config.hasOwnProperty('balancer')) ? config.balancer : 0;
     }
 
     let direction = (config.hasOwnProperty('rtl') && config.rtl === true && isDocumentRtl()) ? 'left' : 'right';
