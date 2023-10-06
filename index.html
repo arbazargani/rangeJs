@@ -68,6 +68,10 @@
         <label>Sea Theme </label>
         <hr>
         <input type="range" id="range_sea">
+
+        <label>High range value </label>
+        <hr>
+        <input type="range" id="range_sea_big" min="2000000" max="50000000" step="1000000">
     </div>
     
     <script src="range.js"></script>
@@ -88,6 +92,7 @@
         }, '#range_default');
         rangeJsinit({'theme':'prime', 'value': 40}, '#range_prime');
         rangeJsinit({'theme':'sea', 'value': 70}, '#range_sea');
+        rangeJsinit({'theme':'sea', 'value': 3000000}, '#range_sea_big');
     </script>
 </body>
 </html>

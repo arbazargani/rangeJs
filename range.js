@@ -18,6 +18,7 @@ const colorMap = {
 }
 
 function isDocumentRtl() {
+    return true;
     if ((document.querySelector('html').dir === 'rtl')) {
         return true
     }
@@ -26,6 +27,12 @@ function isDocumentRtl() {
 
 function handleRangeElementStyle(item, config) {
     let progress = item.value;
+
+    if (progress > 100 && item.max !== undefined) {
+        // minus 2 to handle styling of background fill overflow.
+        progress = Math.floor((progress * 100) / item.max) - 2;
+    }
+
     let direction = (config.hasOwnProperty('rtl') && config.rtl === true && isDocumentRtl()) ? 'left' : 'right';
     let background = backgroundMap[config.theme];
     let forground = colorMap[config.theme];
