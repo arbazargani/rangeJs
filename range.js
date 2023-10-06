@@ -8,13 +8,15 @@ const baseConfig = {
 const backgroundMap = {
     'default': '#ccc',
     'prime': '#28293d',
-    'sea': '#283d33'
+    'sea': '#283d33',
+    'sky': '#497177'
 }
 
 const colorMap = {
     'default': '#f50',
     'prime': '#3e7bfa',
-    'sea': '#02c38e'
+    'sea': '#02c38e',
+    'sky': '#49e4fa'
 }
 
 function isDocumentRtl() {

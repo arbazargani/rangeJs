@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="range.css">
     <link rel="stylesheet" href="range_prime.css">
     <link rel="stylesheet" href="range_sea.css">
+    <link rel="stylesheet" href="range_sky.css">
     <title>Pretty Range Selector</title>
     <style>
         html {
@@ -71,7 +72,7 @@
 
         <label>High range value </label>
         <hr>
-        <input type="range" id="range_sea_big" min="2000000" max="50000000" step="1000000">
+        <input type="range" id="range_sea_big" min="1" max="100" step="1" value=2>
     </div>
     
     <script src="range.js"></script>
@@ -92,7 +93,7 @@
         }, '#range_default');
         rangeJsinit({'theme':'prime', 'value': 40}, '#range_prime');
         rangeJsinit({'theme':'sea', 'value': 70}, '#range_sea');
-        rangeJsinit({'theme':'sea', 'value': 3000000, balancer: -2}, '#range_sea_big');
+        rangeJsinit({'theme':'sky'}, '#range_sea_big');
     </script>
 </body>
 </html>

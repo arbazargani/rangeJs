@@ -50,7 +50,7 @@ currently you can define your callbacks by `cfns` parameter inside config object
 
 **Note:** consider to pass the callback as a lambda function to prevent unnecessary function call.
 
-<span style="color: red">**Note:** </span>for values more than 100, you should use `balancer` option to fix. use negative or positive integer directly inside config object.
+**Importnat:** for values more than 100, you should use `balancer` option to fix. use negative or positive integer directly inside config object.
 
 ```js
 function notif(msg) {
@@ -91,6 +91,7 @@ you can use core ready themes, or define your own theme.
 <!-- theme(s) css file -->
 <link rel="stylesheet" href="range_prime.css">
 <link rel="stylesheet" href="range_sea.css">
+<link rel="stylesheet" href="range_sky.css">
 ```
 
 2. add theme to config during initialization 
@@ -115,6 +116,7 @@ for rtl inputs, set `rtl` to `true` in config object.
 
 ## Current/Future features list
 * ⬜ add step seprator option
+* ✅ ~~add overflow balancer~~
 * ✅ ~~handle first init selected area forground color~~
 * ✅ ~~add default value option~~
 * ✅ ~~callback function handler for events~~

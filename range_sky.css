@@ -1,0 +1,72 @@
+input[type="range"].theme_sky {
+	/* removing default appearance */
+	-webkit-appearance: none;
+	appearance: none; 
+	/* creating a custom design */
+	width: 100%;
+	cursor: pointer;
+	outline: none;
+	border-radius: 15px;
+	/*  overflow: hidden;  remove this line*/
+	
+	/* New additions */
+	height: 6px;
+	background: #ccc;  
+  }
+  
+  /* Thumb: webkit */
+  input[type="range"].theme_sky::-webkit-slider-thumb {
+	/* removing default appearance */
+	-webkit-appearance: none;
+	appearance: none; 
+	/* creating a custom design */
+	height: 15px;
+	width: 15px;
+	background-color: #49e4fa;
+	border-radius: 50%;
+	border: none;
+  
+	/* box-shadow: -407px 0 0 400px #49e4fa; emove this line */
+	transition: .2s ease-in-out;
+  }
+  
+  /* Thumb: Firefox */
+  input[type="range"].theme_sky::-moz-range-thumb {
+	height: 15px;
+	width: 15px;
+	background-color: #49e4fa;
+	border-radius: 50%;
+	border: none;
+	
+	/* box-shadow: -407px 0 0 400px #49e4fa; emove this line */
+	transition: .2s ease-in-out;
+  }
+  
+  /* Hover, active & focus Thumb: Webkit */
+  
+  input[type="range"].theme_sky::-webkit-slider-thumb:hover {
+	box-shadow: 0 0 0 10px rgba(73,228,250, .1)
+  }
+  input[type="range"].theme_sky:active::-webkit-slider-thumb {
+	box-shadow: 0 0 0 13px rgba(73,228,250, .2)
+  }
+  input[type="range"].theme_sky:focus::-webkit-slider-thumb {
+	box-shadow: 0 0 0 13px rgba(73,228,250, .2)
+  }
+  
+  /* Hover, active & focus Thumb: Firfox */
+  
+  input[type="range"].theme_sky::-moz-range-thumb:hover {
+	box-shadow: 0 0 0 10px rgba(73,228,250, .1)
+  }
+  input[type="range"].theme_sky:active::-moz-range-thumb {
+	box-shadow: 0 0 0 13px rgba(73,228,250, .2)
+  }
+  input[type="range"].theme_sky:focus::-moz-range-thumb {
+	box-shadow: 0 0 0 13px rgba(73,228,250, .2)    
+  }
+  
+/* Aesthetics */
+input[type="range"].theme_sky {
+    background: #497177;
+}
