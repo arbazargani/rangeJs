@@ -50,6 +50,8 @@ currently you can define your callbacks by `cfns` parameter inside config object
 
 **Note:** consider to pass the callback as a lambda function to prevent unnecessary function call.
 
+<span style="color: red">**Note:** </span>for values more than 100, you should use `balancer` option to fix. use negative or positive integer directly inside config object.
+
 ```js
 function notif(msg) {
     window.alert(msg);
@@ -60,6 +62,7 @@ rangeJsinit({
     'debug': true,
     'value': 10,
     'rtl': true,
+    'balancer': -2,
     'cfns': {
         'input': () => { notif('on input triggered.') },
         'change': () => { console.log('changed') }
