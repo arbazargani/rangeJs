@@ -131,4 +131,4 @@ for now I prefer pull requests and stars. for the future, i will receive donatio
 
 ## License
 
-The RangeJs is open-sourced script licensed under the [MIT license](https://opensource.org/license/mit/).
+The RangeJs is open-sourced script licensed under the [MIT license](https://github.com/arbazargani/rangeJs/blob/main/LICENSE.md).
